@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mừng Ngày 20-10 - Gửi Mẹ Yêu Của Con</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- File CSS tự viết -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- 1. MÀN HÌNH TỐI MỞ ĐẦU (BẬT SÁNG BẤT NGỜ) -->
+    <div id="intro-overlay" class="d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="glowing-circle mb-4" id="start-btn">
+            <span class="heart-icon">❤️</span>
+        </div>
+        <h3 class="intro-text text-light mb-2">Mẹ chạm vào trái tim nhé!</h3>
+        <p class="text-white-50 small">(Có một điều bất ngờ con dành tặng mẹ)</p>
+    </div>
+
+    <!-- KHU VỰC HIỂN THỊ THÔNG ĐIỆP KHI BẤM BONG BÓNG -->
+    <div id="bubble-toast" class="bubble-toast"></div>
+
+    <!-- KHU VỰC HOA RƠI & BONG BÓNG BAY -->
+    <div id="petals-container"></div>
+    <div id="bubbles-container"></div>
+
+    <!-- 2. NỘI DUNG CHÍNH CỦA TRANG WEB -->
+    <main id="main-content" class="container py-5 d-none">
+        
+        <!-- PHẦN BANNER & TRÁI TIM ĐẬP NHỊP -->
+        <header class="text-center mb-5 pt-3">
+            <span class="badge rounded-pill bg-pink-soft text-danger px-3 py-2 mb-3 shadow-sm">
+                🌸 Ngày Phụ Nữ Việt Nam 20 - 10 🌸
+            </span>
+            <h1 class="main-title display-4 fw-bold mb-2">Gửi Mẹ Yêu Của Con</h1>
+            <p class="subtitle lead text-muted mb-4">Cảm ơn mẹ vì đã luôn là bầu trời bình yên nhất!</p>
+            
+            <!-- Trái tim CSS phát sáng đập nhịp -->
+            <div class="heart-wrapper my-4">
+                <div class="css-heart"></div>
+            </div>
+        </header>
+
+        <!-- PHẦN BỨC THƯ ĐÁNH MÁY (TYPEWRITER) -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-lg-8 col-md-10">
+                <div class="letter-card p-4 p-md-5 position-relative">
+                    <div class="corner-flower top-left">🌺</div>
+                    <div class="corner-flower top-right">🌸</div>
+                    <div class="corner-flower bottom-left">🌸</div>
+                    <div class="corner-flower bottom-right">🌺</div>
+                    
+                    <h2 class="section-title text-center mb-4">Đôi lời con muốn nói...</h2>
+                    <div class="letter-body">
+                        <span id="typewriter-text"></span><span class="cursor">|</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN BỘ THẺ LẬT 3D (3D FLIP CARDS) -->
+        <section class="mb-5 py-3">
+            <h2 class="section-title text-center mb-2">Những điều con gửi tới Mẹ</h2>
+            <p class="text-center text-muted small mb-4">(Mẹ hãy chạm hoặc di chuột vào từng tấm thẻ nhé!)</p>
+            
+            <div class="row g-4">
+                <!-- Thẻ 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon">🌷</div>
+                                <h4>Sức Khỏe</h4>
+                                <span class="tap-hint">Chạm để mở ↻</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>"Con chúc mẹ luôn dồi dào sức khỏe, mỗi ngày thức dậy đều tràn đầy năng lượng và bình an."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon">😊</div>
+                                <h4>Niềm Vui</h4>
+                                <span class="tap-hint">Chạm để mở ↻</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>"Mong nụ cười ấm áp sẽ luôn nở trên môi mẹ. Mẹ cười lên là cả nhà mình đều thấy hạnh phúc!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon">🤝</div>
+                                <h4>Lời Hứa</h4>
+                                <span class="tap-hint">Chạm để mở ↻</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>"Con hứa sẽ cố gắng học tập thật tốt, tự giác hơn và phụ giúp mẹ nhiều việc nhà hơn nữa!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon">💖</div>
+                                <h4>Biết Ơn</h4>
+                                <span class="tap-hint">Chạm để mở ↻</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>"Cảm ơn mẹ vì những bữa cơm ngon, những đêm thức trắng và tất cả sự hy sinh thầm lặng vì con."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN HỘP QUÀ BÍ MẬT CUỐI TRANG -->
+        <section class="text-center my-5 py-4">
+            <h2 class="section-title mb-3">Món quà đặc biệt dành riêng cho Mẹ</h2>
+            <p class="text-muted mb-4">Mẹ hãy bấm vào hộp quà bên dưới để nhận đặc quyền hôm nay nhé!</p>
+            
+            <div id="gift-box-container" class="d-inline-block">
+                <div id="gift-box" class="gift-box" onclick="openGift()">
+                    🎁
+                </div>
+            </div>
+
+            <!-- Phiếu đặc quyền hiện ra sau khi mở quà -->
+            <div id="gift-content" class="gift-voucher mx-auto mt-4 d-none">
+                <div class="voucher-badge">🌟 VOUCHER ĐẶC QUYỀN 20-10 🌟</div>
+                <h3 class="mt-3 fw-bold text-danger">Thẻ Miễn Làm Việc Nhà</h3>
+                <p class="mt-2 mb-3">
+                    Hôm nay mẹ chỉ việc nghỉ ngơi, thư giãn và làm điều mẹ thích. 
+                    Mọi việc dọn dẹp, rửa bát và đấm lưng cứ để con lo hết nhé!
+                </p>
+                <div class="voucher-footer">Hạn sử dụng: Mãi mãi yêu Mẹ ❤️</div>
+            </div>
+        </section>
+
+        <footer class="text-center text-muted small mt-5 pt-4 border-top">
+            <p>Được làm với tất cả tình yêu thương dành tặng Mẹ nhân ngày 20/10 🌸</p>
+        </footer>
+    </main>
+
+    <!-- File JavaScript tự viết -->
+    <script src="script.js"></script>
+</body>
+</html>
